@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自転車で風景を楽しむ - 世界を探索する別の方法</title>
+    <title>Riverbank Scenery - Serene Waterside Views</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f8f9fa;
+            background-color: #e6f2ff;
             color: #333;
             line-height: 1.6;
         }
@@ -25,9 +25,9 @@
             padding: 0 20px;
         }
         
-        /* ナビゲーションバースタイル */
+        /* Navigation Bar Styles */
         header {
-            background-color: #2c5530;
+            background-color: rgba(44, 94, 122, 0.9);
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -70,15 +70,15 @@
         }
         
         .nav-links a:hover {
-            color: #a3d9a5;
+            color: #a8d8ea;
         }
         
-        /* ヒーローエリアスタイル */
+        /* Hero Area Styles */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -104,7 +104,7 @@
         
         .btn {
             display: inline-block;
-            background-color: #4a7c59;
+            background-color: #4a8ca7;
             color: white;
             padding: 12px 30px;
             border-radius: 30px;
@@ -116,12 +116,12 @@
         }
         
         .btn:hover {
-            background-color: #3a6348;
+            background-color: #3a738a;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        /* コンテンツエリアスタイル */
+        /* Content Area Styles */
         .section {
             padding: 80px 0;
         }
@@ -133,7 +133,7 @@
         
         .section-title h2 {
             font-size: 2.5rem;
-            color: #2c5530;
+            color: #2c5e7a;
             margin-bottom: 15px;
         }
         
@@ -143,14 +143,14 @@
             margin: 0 auto;
         }
         
-        /* サイクリングルートスタイル */
-        .routes {
+        /* Scenic Spots Styles */
+        .spots {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .route-card {
+        .spot-card {
             background: white;
             border-radius: 10px;
             overflow: hidden;
@@ -158,48 +158,48 @@
             transition: transform 0.3s;
         }
         
-        .route-card:hover {
+        .spot-card:hover {
             transform: translateY(-10px);
         }
         
-        .route-img {
+        .spot-img {
             height: 200px;
             overflow: hidden;
         }
         
-        .route-img img {
+        .spot-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
         
-        .route-card:hover .route-img img {
+        .spot-card:hover .spot-img img {
             transform: scale(1.1);
         }
         
-        .route-content {
+        .spot-content {
             padding: 20px;
         }
         
-        .route-content h3 {
+        .spot-content h3 {
             margin-bottom: 10px;
-            color: #2c5530;
+            color: #2c5e7a;
         }
         
-        .route-content p {
+        .spot-content p {
             color: #666;
             margin-bottom: 15px;
         }
         
-        .route-info {
+        .spot-info {
             display: flex;
             justify-content: space-between;
             color: #888;
             font-size: 0.9rem;
         }
         
-        /* ギャラリースタイル */
+        /* Gallery Styles */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -224,47 +224,71 @@
             transform: scale(1.1);
         }
         
-        /* サイクリング体験スタイル */
+        /* Experience Section */
         .experience {
-            background-color: #e9f5e9;
-            padding: 60px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
         }
         
         .experience-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .experience-text {
-            flex: 1;
-        }
-        
-        .experience-text h2 {
-            color: #2c5530;
+        .experience h2 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
         
-        .experience-text p {
-            margin-bottom: 20px;
+        .experience p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
         }
         
-        .experience-image {
-            flex: 1;
+        /* Activities Section */
+        .activities {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .activity-card {
+            background: white;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
         }
         
-        .experience-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .activity-card:hover {
+            transform: translateY(-5px);
         }
         
-        /* フッタースタイル */
+        .activity-icon {
+            font-size: 2.5rem;
+            color: #4a8ca7;
+            margin-bottom: 20px;
+        }
+        
+        .activity-card h3 {
+            margin-bottom: 15px;
+            color: #2c5e7a;
+        }
+        
+        /* Footer Styles */
         footer {
-            background-color: #2c5530;
+            background-color: #2c5e7a;
             color: white;
             padding: 60px 0 20px;
         }
@@ -296,7 +320,7 @@
         }
         
         .footer-column a:hover {
-            color: #a3d9a5;
+            color: #a8d8ea;
         }
         
         .social-links {
@@ -316,7 +340,7 @@
         }
         
         .social-links a:hover {
-            background-color: #4a7c59;
+            background-color: #4a8ca7;
             transform: translateY(-5px);
         }
         
@@ -328,7 +352,7 @@
             color: #ccc;
         }
         
-        /* レスポンシブデザイン */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -338,10 +362,6 @@
                 font-size: 2.5rem;
             }
             
-            .experience-content {
-                flex-direction: column;
-            }
-            
             .section {
                 padding: 50px 0;
             }
@@ -349,83 +369,80 @@
     </style>
 </head>
 <body>
-    <!-- ナビゲーションバー -->
+    <!-- Navigation Bar -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <i class="fas fa-bicycle"></i>
-                    <span>自転車で風景を楽しむ</span>
+                    <i class="fas fa-water"></i>
+                    <span>RiverViews</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">サイクリングルート</a></li>
-                    <li><a href="#">風景ギャラリー</a></li>
-                    <li><a href="#">サイクリングギア</a></li>
-                    <li><a href="#">私たちについて</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Scenic Spots</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ヒーローエリア -->
+    <!-- Hero Area -->
     <section class="hero">
         <div class="hero-content">
-            <h1>自転車で世界の美を探索</h1>
-            <p>自転車の上で自然の息吹を感じ、見過ごされがちな風景を発見する</p>
-            <a href="#" class="btn">サイクリングルートを探索</a>
+            <h1>Discover Beautiful Riverbanks</h1>
+            <p>Experience the tranquility and beauty of waterside landscapes around the world</p>
+            <a href="#" class="btn">Explore Scenic Spots</a>
         </div>
     </section>
 
-    <!-- おすすめルート -->
+    <!-- Featured Scenic Spots -->
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>厳選サイクリングルート</h2>
-                <p>私たちが風景の美しいサイクリングルートを厳選しました。それぞれが独自の魅力を持っています</p>
+                <h2>Featured Riverbanks</h2>
+                <p>Discover these beautiful riverbank locations perfect for relaxation and photography</p>
             </div>
-            <div class="routes">
-                <div class="route-card">
-                    <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="湖辺のサイクリング">
+            <div class="spots">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Qianshan River">
                     </div>
-                    <div class="route-content">
-                        <h3>湖畔の風ルート</h3>
-                        <p>静かな湖岸線に沿ってサイクリングし、そよ風を感じ、湖と山の景色を楽しむ。</p>
-                        <div class="route-info">
-                            <span><i class="fas fa-road"></i> 25km</span>
-                            <span><i class="fas fa-clock"></i> 2-3時間</span>
-                            <span><i class="fas fa-mountain"></i> 初級</span>
+                    <div class="spot-content">
+                        <h3>Qianshan River</h3>
+                        <p>In the morning, the Qianshan River is like a mirror with beautiful scenery on both banks[citation:6]. The elegant white bridge appears tranquil and atmospheric against the mirror-like river surface[citation:6].</p>
+                        <div class="spot-info">
+                            <span><i class="fas fa-map-marker-alt"></i> Zhuhai, China</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="route-card">
-                    <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="山間のサイクリング">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Kankakee River">
                     </div>
-                    <div class="route-content">
-                        <h3>山間探検ルート</h3>
-                        <p>茂った森林を抜け、山頂まで登り、壮大な山々の景色を見下ろす。</p>
-                        <div class="route-info">
-                            <span><i class="fas fa-road"></i> 40km</span>
-                            <span><i class="fas fa-clock"></i> 4-5時間</span>
-                            <span><i class="fas fa-mountain"></i> 中級</span>
+                    <div class="spot-content">
+                        <h3>Kankakee River</h3>
+                        <p>On a spring morning, the riverbank is tranquil with murmuring streams and lush trees, presenting peaceful and beautiful natural scenery[citation:4]. The environment is exquisite, allowing visitors to immerse themselves in nature's tranquility.</p>
+                        <div class="spot-info">
+                            <span><i class="fas fa-map-marker-alt"></i> Illinois, USA</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="route-card">
-                    <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="田園地帯のサイクリング">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gudong Seawall">
                     </div>
-                    <div class="route-content">
-                        <h3>田園風景ルート</h3>
-                        <p>静かな田舎道を通り抜け、田園風景を楽しみ、田舎の生活の静けさを感じる。</p>
-                        <div class="route-info">
-                            <span><i class="fas fa-road"></i> 30km</span>
-                            <span><i class="fas fa-clock"></i> 3時間</span>
-                            <span><i class="fas fa-mountain"></i> 初級</span>
+                    <div class="spot-content">
+                        <h3>Gudong Seawall</h3>
+                        <p>Located on the coastal area of Bohai Bay, this magnificent seawall lies like a long dragon crouching over waves[citation:1]. Outside the seawall, blue waves twinkle with fishing boats and soaring seagulls[citation:1].</p>
+                        <div class="spot-info">
+                            <span><i class="fas fa-map-marker-alt"></i> Dongying, China</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
                         </div>
                     </div>
                 </div>
@@ -433,91 +450,125 @@
         </div>
     </section>
 
-    <!-- 風景ギャラリー -->
+    <!-- Riverbank Gallery -->
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>サイクリング風景ギャラリー</h2>
-                <p>サイクリングの途中で出会った素敵な瞬間を記録</p>
+                <h2>Riverbank Gallery</h2>
+                <p>Capturing the serene beauty of riverbanks around the world</p>
             </div>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="サイクリング風景1">
+                    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Riverbank Scenery 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="サイクリング風景2">
+                    <img src="https://images.unsplash.com/photo-1533237264982-2dd6a3761356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Riverbank Scenery 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="サイクリング風景3">
+                    <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Riverbank Scenery 3">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1533237264982-2dd6a3761356?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="サイクリング風景4">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Riverbank Scenery 4">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- サイクリング体験 -->
+    <!-- Experience Section -->
     <section class="experience">
         <div class="container">
             <div class="experience-content">
-                <div class="experience-text">
-                    <h2>なぜ自転車で風景を楽しむのか？</h2>
-                    <p>自転車旅行はユニークな体験です。風景を適切な速度で楽しむことができ、歩くほど遅くもなく、車で移動するほど急ぎすぎることもありません。</p>
-                    <p>サイクリング中、いつでも止まって、そよ風を感じ、鳥のさえずりを聞き、美しい景色を撮影し、地元の人々と交流することができます。これらは他の旅行方法では得難い体験です。</p>
-                    <p>一人で静けさを求めて自転車に乗るのも、友人と楽しさを分かち合うのも、自転車で風景を楽しむことは忘れられない思い出をもたらします。</p>
-                    <a href="#" class="btn">もっと詳しく</a>
+                <h2>The Riverbank Experience</h2>
+                <p>Riverbanks offer a unique combination of natural beauty, tranquility, and recreational opportunities. The gentle flow of water alongside pathways creates a calming atmosphere, while the diverse landscapes provide endless visual enjoyment.</p>
+                <p>From the magnificent Gudong Seawall that "lies like a long dragon crouching over waves"[citation:1] to the mirror-like surface of Qianshan River[citation:6], these waterscapes capture the imagination and provide serene escapes from urban life.</p>
+                <a href="#" class="btn">Discover More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Riverside Activities</h2>
+                <p>Make the most of your riverbank visit with these popular activities</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Capture stunning water reflections, wildlife, and beautiful landscapes.</p>
                 </div>
-                <div class="experience-image">
-                    <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="サイクリング体験">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>Walking & Hiking</h3>
+                    <p>Enjoy peaceful strolls along well-maintained riverbank paths.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Fishing</h3>
+                    <p>Relax with fishing in tranquil river settings.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <h3>Bird Watching</h3>
+                    <p>Observe diverse bird species in their natural habitats.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- フッター -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>私たちについて</h3>
+                    <h3>Scenic Spots</h3>
                     <ul>
-                        <li><a href="#">私たちの物語</a></li>
-                        <li><a href="#">チーム紹介</a></li>
-                        <li><a href="#">連絡先</a></li>
-                        <li><a href="#">参加する</a></li>
+                        <li><a href="#">Popular Locations</a></li>
+                        <li><a href="#">Seasonal Highlights</a></li>
+                        <li><a href="#">Hidden Gems</a></li>
+                        <li><a href="#">Family-Friendly</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>サイクリングリソース</h3>
+                    <h3>Resources</h3>
                     <ul>
-                        <li><a href="#">サイクリングルート</a></li>
-                        <li><a href="#">装備ガイド</a></li>
-                        <li><a href="#">安全のヒント</a></li>
-                        <li><a href="#">サイクリングイベント</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">Best Times to Visit</a></li>
+                        <li><a href="#">Photography Guide</a></li>
+                        <li><a href="#">Weather Conditions</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>コミュニティ</h3>
+                    <h3>Community</h3>
                     <ul>
-                        <li><a href="#">サイクリングストーリー</a></li>
-                        <li><a href="#">写真共有</a></li>
-                        <li><a href="#">サイクリングフォーラム</a></li>
-                        <li><a href="#">イベントカレンダー</a></li>
+                        <li><a href="#">Photo Gallery</a></li>
+                        <li><a href="#">Travel Stories</a></li>
+                        <li><a href="#">Events & Meetups</a></li>
+                        <li><a href="#">Share Your Experience</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>フォローする</h3>
+                    <h3>Connect With Us</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 自転車で風景を楽しむ - 世界を探索する別の方法 | すべての画像はUnsplashから</p>
+                <p>&copy; 2023 RiverViews - Beautiful Riverbank Scenery Around the World | All images from Unsplash</p>
             </div>
         </div>
     </footer>
